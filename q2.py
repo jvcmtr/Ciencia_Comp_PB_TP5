@@ -2,13 +2,11 @@ from q2_data import CAPACIDADE_SERVIDOR, VMS_SOLICITADAS
 
 def next_fit(items, capacity):
     bins = []
-    
     if not items:
         return bins
 
     current = []
     soma = 0
-    
     for i in items:
         if soma + i <= capacity:
             current.append(i)
